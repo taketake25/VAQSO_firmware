@@ -26,7 +26,7 @@ void onOnlyAFan(int fanNumber)
   for (int i = 0; i < 5; i++)
   {
     if (i == fanNumber)
-      analogWrite(fans[i], (int)255 / 2);
+      analogWrite(fans[i], (int)255 / 1); // 速度調節したければここを弄ろう
     else
       analogWrite(fans[i], 0);
   }
@@ -53,7 +53,7 @@ void setup()
   pinMode(fan2, OUTPUT);
   pinMode(fan3, OUTPUT);
   pinMode(fan4, OUTPUT);
-  analogWrite(fan0, 0);
+  analogWrite(fan0, 0); // 一応 PWM 出力するものとして考えている
   analogWrite(fan1, 0);
   analogWrite(fan2, 0);
   analogWrite(fan3, 0);
